@@ -151,7 +151,7 @@ function InputEmoji(props, ref) {
         event.preventDefault();
       }
 
-      if (event.key === "Enter" && textInputRef.current) {
+      if (event.key === "Enter" && textInputRef.current && event.ctrlKey) {
         event.preventDefault();
 
         const text = sanitize(textInputRef.current.html);
@@ -267,6 +267,15 @@ function InputEmoji(props, ref) {
         appendContent={appendContent}
         addSanitizeFn={addSanitizeFn}
       />
+      <EmojiPickerWrapper
+        theme={theme}
+        keepOpened={keepOpened}
+        disableRecent={disableRecent}
+        customEmojis={customEmojis}
+        addSanitizeFn={addSanitizeFn}
+        addPolluteFn={addPolluteFn}
+        appendContent={appendContent}
+      />
       <TextInput
         ref={textInputRef}
         onCopy={handleCopy}
@@ -287,15 +296,6 @@ function InputEmoji(props, ref) {
         tabIndex={tabIndex}
         className={inputClass}
         onChange={handleTextInputChange}
-      />
-      <EmojiPickerWrapper
-        theme={theme}
-        keepOpened={keepOpened}
-        disableRecent={disableRecent}
-        customEmojis={customEmojis}
-        addSanitizeFn={addSanitizeFn}
-        addPolluteFn={addPolluteFn}
-        appendContent={appendContent}
       />
     </div>
   );

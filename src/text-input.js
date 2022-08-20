@@ -143,6 +143,7 @@ const TextInput = (
           onKeyUp={handleKeyUp}
           tabIndex={tabIndex}
           contentEditable
+          dir="auto"
           className={`react-input-emoji--input${className ? ` ${className}` : ""
             }`}
           onBlur={props.onBlur}
