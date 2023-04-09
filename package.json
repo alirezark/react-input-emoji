@@ -1,10 +1,10 @@
 {
-  "name": "react-input-emoji",
+  "name": "@alirezark/react-input-emoji",
   "version": "4.1.1",
   "description": "A React input with an option to add an emoji",
-  "author": "cesarwbr",
+  "author": "alirezark",
   "license": "MIT",
-  "repository": "cesarwbr/react-input-emoji",
+  "repository": "alirezark/react-input-emoji",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
